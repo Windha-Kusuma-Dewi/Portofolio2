@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../project.css">
+    <link rel="stylesheet" href="tiket.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <title>Ticketing App</title>
+</head>
+
+<body>
+    <div class="container">
+        <button class="mobile-menu-btn" onclick="toggleSidebar()">☰</button>
+        <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <img src="../../../img/windha.jpg" alt="Windha Kusuma Dewi">
+                <h1>Windha Kusuma Dewi</h1>
+            </div>
+
+            <nav class="nav">
+                <a href="/index.html" class="nav-item"><i class="bi bi-house-door" style="font-size:
+                    20px;"></i>
+                    Home</a>
+                <a href="../project.html" class="nav-item active"> <i class="bi bi-suitcase-lg"
+                        style="font-size: 20px;"></i>
+                    Project</a>
+                <a href="../../about/about.html" class="nav-item"><i class="bi bi-person" style="font-size: 20px;"></i>
+                    About Me</a>
+                <a href="../../contact/contact.html" class="nav-item"><i class="bi bi-envelope"
+                        style="font-size: 20px;"></i>
+                    Contact</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="social-links">
+                    <a href="https://github.com/Windha-Kusuma-Dewi" aria-label="GitHub">
+                        <i class="bi bi-github" style="font-size: 20px;"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/windhakusumadewi/" aria-label="LinkedIn">
+                        <i class="bi bi-linkedin" style="font-size: 20px;"></i>
+                    </a>
+                    <a href="https://www.instagram.com/windhakusumadewi?igsh=NXgyOWFlZGh4cmQw" aria-label="LinkedIn">
+                        <i class="bi bi-instagram" style="font-size: 20px;"></i>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="content-wrapper">
+
+                <section class="detail-section">
+
+                    <!-- ==== BACK BUTTON + TITLE ==== -->
+                    <div class="detail-header">
+                        <span class="back-btn" onclick="history.back()">&#10799;</span>
+                        <h2 class="detail-title">Ticketing App</h2>
+                    </div>
+
+                    <!-- === CAROUSEL === -->
+                    <div class="carousel-container">
+
+                        <div class="carousel-wrapper">
+                            <div class="carousel-slide" id="carouselSlide">
+                                <img src="../../../img/tiket/1.png">
+                                <img src="../../../img/tiket/2.png">
+                                <img src="../../../img/tiket/3.png">
+                            </div>
+                        </div>
+
+                        <div class="carousel-controls">
+                            <button class="carousel-btn" onclick="moveSlide(-1)">&#10094;</button>
+                            <button class="carousel-btn" onclick="moveSlide(1)">&#10095;</button>
+                        </div>
+
+                        <div class="carousel-dots" id="carouselDots"></div>
+                    </div>
+                    <!-- === CAROUSEL END === -->
+
+                    <h2 class="description">Description</h2>
+
+                    <p class="detail-description">
+                        This project involves creating a dummy interface for a ticketing app using Flutter, completely
+                        following the UI/UX design provided previously. In the process, I built various pages, including
+                        a dashboard, purchase page, payment page, pop-up alerts, and payment receipts.
+                        <br>
+                        <br>
+                        Besides being a practice for building a UI in Flutter, this project helped me strengthen my
+                        understanding of design implementation, efficient widget usage, and maintaining alignment
+                        between UI/UX concepts and the resulting display. Although still a dummy without a backend, this
+                        app is designed to look clean.
+
+                    </p>
+
+                    <div class="detail-tech">
+                        <span class="tech-tag">Flutter</span>
+                    </div>
+
+                </section>
+
+            </div>
+        </main>
+
+    </div>
+
+    <script src="../../script.js"></script>
+
+    <!-- === CAROUSEL JS === -->
+    <script>
+        let slideIndex = 0;
+
+        const slide = document.getElementById("carouselSlide");
+        const images = slide.querySelectorAll("img");
+        const dotsContainer = document.getElementById("carouselDots");
+
+        /* Generate dots otomatis */
+        images.forEach((_, i) => {
+            let dot = document.createElement("span");
+            dot.classList.add("dot");
+            dot.onclick = () => goToSlide(i);
+            dotsContainer.appendChild(dot);
+        });
+
+        const dots = dotsContainer.querySelectorAll(".dot");
+        dots[0].classList.add("active");
+
+        function moveSlide(direction) {
+            slideIndex += direction;
+
+            if (slideIndex >= images.length) slideIndex = 0;
+            if (slideIndex < 0) slideIndex = images.length - 1;
+
+            updateCarousel();
+        }
+
+        function goToSlide(index) {
+            slideIndex = index;
+            updateCarousel();
+        }
+
+        function updateCarousel() {
+            slide.style.transform = `translateX(-${slideIndex * 100}%)`;
+
+            dots.forEach(dot => dot.classList.remove("active"));
+            dots[slideIndex].classList.add("active");
+        }
+    </script>
+
+</body>
+
+</html>

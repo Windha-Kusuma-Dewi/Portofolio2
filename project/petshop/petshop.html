@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../project.css">
+    <link rel="stylesheet" href="petshop.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <title>HewanKu</title>
+</head>
+
+<body>
+    <div class="container">
+        <button class="mobile-menu-btn" onclick="toggleSidebar()">☰</button>
+        <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+        <!-- Sidebar sama seperti project.html -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <img src="../../../img/windha.jpg" alt="Windha Kusuma Dewi">
+                <h1>Windha Kusuma Dewi</h1>
+            </div>
+
+            <nav class="nav">
+                <a href="/index.html" class="nav-item"><i class="bi bi-house-door" style="font-size:
+                    20px;"></i>
+                    Home</a>
+                <a href="../project.html" class="nav-item active"> <i class="bi bi-suitcase-lg"
+                        style="font-size: 20px;"></i>
+                    Project</a>
+                <a href="../../about/about.html" class="nav-item"><i class="bi bi-person" style="font-size: 20px;"></i>
+                    About Me</a>
+                <a href="../../contact/contact.html" class="nav-item"><i class="bi bi-envelope"
+                        style="font-size: 20px;"></i>
+                    Contact</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="social-links">
+                    <a href="https://github.com/Windha-Kusuma-Dewi" aria-label="GitHub">
+                        <i class="bi bi-github" style="font-size: 20px;"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/windhakusumadewi/" aria-label="LinkedIn">
+                        <i class="bi bi-linkedin" style="font-size: 20px;"></i>
+                    </a>
+                    <a href="https://www.instagram.com/windhakusumadewi?igsh=NXgyOWFlZGh4cmQw" aria-label="LinkedIn">
+                        <i class="bi bi-instagram" style="font-size: 20px;"></i>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="content-wrapper">
+
+                <section class="detail-section">
+                    <div class="detail-header">
+                        <span class="back-btn" onclick="history.back()">&#10799;</span>
+                        <h2 class="detail-title">HewanKu (Petshop)</h2>
+                    </div>
+
+                    <!-- Screenshot Project -->
+                    <div class="detail-image-wrapper">
+                        <img class="detail-image" src="../../../img/petshop/1.png" alt="HewanKu Preview">
+                    </div>
+
+                    <h2>Description</h2>
+                    <!-- Description -->
+                    <p class="detail-description">
+                        HewanKu is a UI/UX design concept for a modern pet shop application. This project focuses on
+                        developing a user interface and experience that is friendly, informative, and well-structured.
+                        In the design process, I began by analyzing the main user needs, such as ease of searching for
+                        products and quick access to important information like prices, descriptions, and product
+                        reviews.
+                        <br>
+                        <br>
+                        The entire design was created using Figma, from mapping out the user flow to designing
+                        proportional layouts and creating consistent UI components. Through this project, I gained a
+                        deeper understanding of how to structure clear navigation, build effective visual elements, and
+                        maintain design consistency across every page. The HewanKu project served as an important
+                        exercise for me in developing my UI/UX design skills and translating visual ideas into a
+                        functional and modern mobile app interface.
+                    </p>
+
+                    <!-- Tech Stack -->
+                    <div class="detail-tech">
+                        <span class="tech-tag">Flutter</span>
+                    </div>
+
+                </section>
+
+            </div>
+        </main>
+
+    </div>
+
+    <script src="../../script.js"></script>
+</body>
+
+</html>

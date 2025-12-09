@@ -1,0 +1,134 @@
+/* About Section */
+.about-section {
+    padding: 48px 0;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.about-container {
+    margin-top: 48px;
+}
+
+.info-card {
+    background-color: #18181b;
+    border: 1px solid rgba(250, 204, 21, 0.2);
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 48px;
+}
+
+.info-card p {
+    color: #d1d5db;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.info-card p:last-child {
+    margin-bottom: 0;
+}
+
+/* Subsection Title */
+.subsection-title {
+    font-size: 24px;
+    color: #facc15;
+    margin-bottom: 16px;
+}
+
+/* CV Section */
+.cv-section {
+    margin-bottom: 48px;
+}
+
+.cv-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background-color: #facc15;
+    color: #000;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color .3s;
+    text-decoration: none;
+}
+
+.cv-btn:hover {
+    background-color: #fde047;
+}
+
+/* Experience & Education Sections */
+.experience-section,
+.education-section {
+    margin-bottom: 48px;
+}
+
+/* Timeline */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.timeline-item {
+    background-color: #18181b;
+    border: 1px solid rgba(250, 204, 21, 0.2);
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.timeline-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.timeline-period {
+    font-size: 14px;
+    color: #facc15;
+}
+
+.timeline-company {
+    color: #9ca3af;
+    margin-bottom: 8px;
+}
+
+.timeline-description {
+    color: #d1d5db;
+    margin-bottom: 12px;
+}
+
+.timeline-list {
+    color: #e5e7eb;
+    margin-left: 18px;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .section-title {
+        font-size: 28px;
+    }
+
+    .subsection-title {
+        font-size: 20px;
+    }
+
+    .timeline-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

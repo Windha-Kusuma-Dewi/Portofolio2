@@ -1,0 +1,116 @@
+:root{
+    --detail-img-max: 900px;
+}
+
+/* ==== CAROUSEL ==== */
+.carousel-container {
+    width: 100%;
+    max-width: var(--detail-img-max);
+    margin: 40px auto;
+}
+
+.carousel-wrapper {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.08);
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+}
+
+.carousel-slide img {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+/* Tombol kiri–kanan DI LUAR gambar */
+.carousel-controls {
+    margin: 15px 0 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.carousel-btn {
+    background: rgba(0,0,0,0.45);
+    color: white;
+    border: none;
+    font-size: 25px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.carousel-btn:hover {
+    background: rgba(0,0,0,0.7);
+}
+
+/* DOTS – versi kecil */
+.carousel-dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.carousel-dots .dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin: 0 3px;
+    background: #cfcfcf;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.carousel-dots .dot.active {
+    background: #333;
+    width: 9px;
+    height: 9px;
+}
+
+/* ==== BACK BUTTON ==== */
+.detail-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.back-btn {
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+}
+
+.back-btn:hover {
+    opacity: 0.7;
+}
+
+/* ==== ORIGINAL CSS ==== */
+.description {
+    margin-left: 15px;
+}
+
+.feature {
+    margin-left: 15px;
+    margin-top: 20px;
+}
+.detail-description { 
+    margin-top: 15px; 
+    margin-left: 30px; 
+    margin-right: 90px;
+}
+.list { margin-left: 50px; margin-top: 10px; }
+.detail-tech { margin: 30px 0 10px 0; }
+.detail-button {
+    color: rgb(48, 48, 255);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media (max-width: 800px){
+    :root{ --detail-img-max: 100%; }
+}

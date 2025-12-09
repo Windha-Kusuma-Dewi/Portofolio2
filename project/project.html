@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <title>My Projects - Windha Kusuma Dewi</title>
+</head>
+
+<body>
+    <div class="container">
+        <button class="mobile-menu-btn" onclick="toggleSidebar()">☰</button>
+        <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <img src="../img/windha.jpg" alt="Windha Kusuma Dewi">
+                <h1>Windha Kusuma Dewi</h1>
+            </div>
+
+            <nav class="nav">
+                <a href="/index.html" class="nav-item">
+                    <i class="bi bi-house-door" style="font-size: 20px;"></i>
+                    Home
+                </a>
+                <a href="project.html" class="nav-item active">
+                    <i class="bi bi-suitcase-lg" style="font-size: 20px;"></i>
+                    Project
+                </a>
+                <a href="../about/about.html" class="nav-item">
+                    <i class="bi bi-person" style="font-size: 20px;"></i>
+                    About Me
+                </a>
+                <a href="../contact/contact.html" class="nav-item">
+                    <i class="bi bi-envelope" style="font-size: 20px;"></i>
+                    Contact
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="social-links">
+                    <a href="https://github.com/Windha-Kusuma-Dewi" aria-label="GitHub">
+                        <i class="bi bi-github" style="font-size: 20px;"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/windhakusumadewi/" aria-label="LinkedIn">
+                        <i class="bi bi-linkedin" style="font-size: 20px;"></i>
+                    </a>
+                    <a href="https://www.instagram.com/windhakusumadewi?igsh=NXgyOWFlZGh4cmQw" aria-label="LinkedIn">
+                        <i class="bi bi-instagram" style="font-size: 20px;"></i>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="content-wrapper">
+                <section class="project-section active">
+                    <div class="project-container">
+                        <h2 class="section-title">My <span class="highlight">Projects</span></h2>
+                        <p class="section-subtitle">Some projects I have worked on</p>
+
+                        <div class="project-grid">
+                            <div class="project-card">
+                                <h3 class="project-title">Webshop</h3>
+                                <p class="project-description">Webshop is an HTML and CSS-based exercise project that
+                                    I created to understand how to create a web display.</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">HTML</span>
+                                    <span class="tech-tag">CSS</span>
+                                </div>
+                                <a href="webshop/webshop.html" class="project-link">View Project →</a>
+                            </div>
+
+                            <div class="project-card">
+                                <h3 class="project-title">EVOConnect</h3>
+                                <p class="project-description">EVOConnect is a professional social networking platform
+                                    for connections, job search, and career development based on React JS.</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">React JS</span>
+                                    <span class="tech-tag">Golang</span>
+                                    <span class="tech-tag">Tailwind CSS</span>
+                                </div>
+                                <a href="evoconnect/evoconnect.html" class="project-link">View Project →</a>
+                            </div>
+
+                            <div class="project-card">
+                                <h3 class="project-title">UI/UX HewanKu (Petshop)</h3>
+                                <p class="project-description">HewanKu is a UI/UX design concept for a modern pet store
+                                    app,
+                                    featuring product search and product details.</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Figma</span>
+                                </div>
+                                <a href="petshop/petshop.html" class="project-link">View Project →</a>
+                            </div>
+                        </div>
+
+                        <div class="project-grid">
+                            <div class="project-card" style="margin-top: 30px;">
+                                <h3 class="project-title">Ticketing App</h3>
+                                <p class="project-description">Creating a dummy ticket application display using
+                                    Flutter, in accordance with the UI/UX design.</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Flutter</span>
+                                </div>
+                                <a href="tiket/tiket.html" class="project-link">View Project →</a>
+                            </div>
+
+                            <div class="project-card" style="margin-top: 30px;">
+                                <h3 class="project-title">Sewa Lapangan</h3>
+                                <p class="project-description">Create a dummy view of the Field Rental application using
+                                    Flutter, according to the UI/UX design.</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Flutter</span>
+                                </div>
+                                <a href="lapangan/lapangan.html" class="project-link">View Project →</a>
+                            </div>
+
+                            <div class="project-card" style="margin-top: 30px;">
+                                <h3 class="project-title">Jurnalku</h3>
+                                <p class="project-description">Changing the appearance of the JurnalKu website to a mobile version using Flutter.</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Flutter</span>
+                                </div>
+                                <a href="jurnalku/jurnalku.html" class="project-link">View Project →</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="../script.js"></script>
+    <script src="project.js"></script>
+</body>
+
+</html>
