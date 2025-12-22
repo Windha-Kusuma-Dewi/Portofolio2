@@ -1,18 +1,27 @@
-// Home page specific JavaScript
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('Home page loaded');
-    
-    // Add any home page specific functionality here
-    const heroTitle = document.querySelector('.hero-title');
-    if (heroTitle) {
-        // Animation for hero title
-        heroTitle.style.opacity = '0';
-        heroTitle.style.transform = 'translateY(20px)';
-        heroTitle.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-        
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("Home page loaded");
+
+    const elements = [
+        ".badge",
+        ".hero-title",
+        ".hero-subtitle",
+        ".hero-description",
+        ".btn-group"
+    ];
+
+    elements.forEach((selector, index) => {
+        const el = document.querySelector(selector);
+        if (!el) return;
+
+        // initial state
+        el.style.opacity = "0";
+        el.style.transform = "translateY(30px)";
+        el.style.transition = "opacity 0.8s ease, transform 0.8s ease";
+
+        // stagger animation
         setTimeout(() => {
-            heroTitle.style.opacity = '1';
-            heroTitle.style.transform = 'translateY(0)';
-        }, 300);
-    }
+            el.style.opacity = "1";
+            el.style.transform = "translateY(0)";
+        }, 300 + index * 200);
+    });
 });

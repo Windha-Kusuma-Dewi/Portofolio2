@@ -1,19 +1,39 @@
-// Contact page JavaScript (FULL VERSION with Web3Forms Integration)
-
 document.addEventListener('DOMContentLoaded', function () {
     console.log('Contact page loaded');
+
+    const animatedElements = [
+        '.section-title',
+        '.contact-info',
+        '.contact-item',
+        '.contact-form',
+        '.form-input',
+        '.form-textarea',
+        '.form-btn'
+    ];
+
+    const elements = document.querySelectorAll(animatedElements.join(','));
+
+    elements.forEach((el, index) => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+
+        setTimeout(() => {
+            el.style.opacity = '1';
+            el.style.transform = 'translateY(0)';
+        }, 200 + index * 150);
+    });
+
 
     const contactForm = document.querySelector('.contact-form');
     const formInputs = document.querySelectorAll('.form-input, .form-textarea');
     const formBtn = document.querySelector('.form-btn');
 
-    // 🔥 Submit ke Web3Forms API
     contactForm.addEventListener('submit', async function (e) {
         e.preventDefault();
 
         let isValid = true;
 
-        // Validasi input
         formInputs.forEach(input => {
             if (!input.value.trim()) {
                 isValid = false;
@@ -28,7 +48,6 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        // Loading state
         formBtn.textContent = 'Mengirim...';
         formBtn.disabled = true;
 
@@ -46,7 +65,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 alert("Pesan berhasil dikirim!");
                 contactForm.reset();
 
-                // Reset border
                 formInputs.forEach(input => {
                     input.style.borderColor = 'rgba(250, 204, 21, 0.2)';
                 });
@@ -62,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
         formBtn.disabled = false;
     });
 
-    // Efek fokus input
+
     formInputs.forEach(input => {
         input.addEventListener('focus', function () {
             this.style.borderColor = '#facc15';
