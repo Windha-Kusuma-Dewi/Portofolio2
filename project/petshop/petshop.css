@@ -2,7 +2,6 @@
     --detail-img-max: 900px;
 }
 
-/* ==== BACK BUTTON + TITLE ==== */
 .detail-header {
     display: flex;
     align-items: center;
@@ -40,7 +39,6 @@
     letter-spacing: -0.01em;
 }
 
-/* ==== CAROUSEL ==== */
 .carousel-container {
     width: 100%;
     max-width: var(--detail-img-max);
@@ -65,7 +63,6 @@
     display: block;
 }
 
-/* Tombol kiri-kanan di luar gambar */
 .carousel-controls {
     margin: 16px 0 8px 0;
     display: flex;
@@ -88,7 +85,6 @@
     color: var(--accent);
 }
 
-/* DOTS */
 .carousel-dots {
     text-align: center;
     margin-top: 12px;
@@ -113,7 +109,6 @@
     height: 9px;
 }
 
-/* ==== CONTENT ==== */
 .description,
 .feature {
     font-family: var(--font-display);

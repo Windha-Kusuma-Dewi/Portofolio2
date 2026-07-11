@@ -1,4 +1,3 @@
-// Toggle Sidebar
 function toggleSidebar() {
     const sidebar = document.getElementById('sidebar');
     const overlay = document.getElementById('overlay');
@@ -6,12 +5,10 @@ function toggleSidebar() {
     overlay.classList.toggle('active');
 }
 
-// Auto-open sidebar on desktop
 if (window.innerWidth >= 1024) {
     document.getElementById('sidebar')?.classList.remove('closed');
 }
 
-// Handle window resize
 window.addEventListener('resize', () => {
     const sidebar = document.getElementById('sidebar');
     const overlay = document.getElementById('overlay');
@@ -24,7 +21,6 @@ window.addEventListener('resize', () => {
     }
 });
 
-// Close sidebar when clicking on overlay
 document.addEventListener('DOMContentLoaded', function() {
     const overlay = document.getElementById('overlay');
     if (overlay) {
