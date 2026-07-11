@@ -1,15 +1,19 @@
 // Project page specific JavaScript
 document.addEventListener('DOMContentLoaded', function () {
-    console.log('Project page loaded');
-
     const projectCards = document.querySelectorAll('.project-card');
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     // Settings animasi
-    const baseDelay = 120;        // jeda antar-card
-    const fadeDuration = 700;     // kehalusan fade
-    const slideDistance = 25;     // geser awal
+    const baseDelay = 100;        // jeda antar-card
+    const fadeDuration = 600;     // kehalusan fade
+    const slideDistance = 20;     // geser awal
 
     projectCards.forEach((card, index) => {
+        if (prefersReducedMotion) {
+            card.style.opacity = '1';
+            return;
+        }
+
         // Set kondisi awal (sebelum animasi)
         card.style.opacity = '0';
         card.style.transform = `translateY(${slideDistance}px)`;
@@ -22,6 +26,6 @@ document.addEventListener('DOMContentLoaded', function () {
         setTimeout(() => {
             card.style.opacity = '1';
             card.style.transform = 'translateY(0)';
-        }, 300 + index * baseDelay);
+        }, 200 + index * baseDelay);
     });
 });

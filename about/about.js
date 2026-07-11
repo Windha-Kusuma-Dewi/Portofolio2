@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("About page loaded");
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     // Semua elemen yang ingin dianimasikan
     const animatedElements = [
@@ -14,6 +14,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const elements = document.querySelectorAll(animatedElements.join(","));
 
     elements.forEach((el, index) => {
+        if (prefersReducedMotion) {
+            el.style.opacity = "1";
+            return;
+        }
+
         // kondisi awal
         el.style.opacity = "0";
         el.style.transform = "translateY(30px)";
@@ -23,6 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
             el.style.opacity = "1";
             el.style.transform = "translateY(0)";
-        }, 200 + index * 200);
+        }, 150 + index * 150);
     });
 });

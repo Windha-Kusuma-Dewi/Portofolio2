@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="project.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
@@ -12,30 +15,34 @@
 
 <body>
     <div class="container">
-        <button class="mobile-menu-btn" onclick="toggleSidebar()">☰</button>
+        <button class="mobile-menu-btn" onclick="toggleSidebar()" aria-label="Buka menu">☰</button>
         <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
 
         <aside class="sidebar" id="sidebar">
             <div class="sidebar-header">
-                <img src="../img/windha.png" alt="Windha Kusuma Dewi">
-                <h1>Windha Kusuma Dewi</h1>
+                <div class="avatar-ring">
+                    <img src="../img/windha.png" alt="Windha Kusuma Dewi">
+                </div>
+                <div class="sidebar-title">
+                    <h1>Windha Kusuma Dewi</h1>
+                </div>
             </div>
 
             <nav class="nav">
                 <a href="../index.html" class="nav-item">
-                    <i class="bi bi-house-door" style="font-size: 20px;"></i>
+                    <span class="nav-icon"><i class="bi bi-house-door"></i></span>
                     Home
                 </a>
                 <a href="project.html" class="nav-item active">
-                    <i class="bi bi-suitcase-lg" style="font-size: 20px;"></i>
+                    <span class="nav-icon"><i class="bi bi-suitcase-lg"></i></span>
                     Project
                 </a>
                 <a href="../about/about.html" class="nav-item">
-                    <i class="bi bi-person" style="font-size: 20px;"></i>
+                    <span class="nav-icon"><i class="bi bi-person"></i></span>
                     About Me
                 </a>
                 <a href="../contact/contact.html" class="nav-item">
-                    <i class="bi bi-envelope" style="font-size: 20px;"></i>
+                    <span class="nav-icon"><i class="bi bi-envelope"></i></span>
                     Contact
                 </a>
             </nav>
@@ -43,13 +50,13 @@
             <div class="sidebar-footer">
                 <div class="social-links">
                     <a href="https://github.com/Windha-Kusuma-Dewi" aria-label="GitHub">
-                        <i class="bi bi-github" style="font-size: 20px;"></i>
+                        <i class="bi bi-github"></i>
                     </a>
                     <a href="https://www.linkedin.com/in/windhakusumadewi/" aria-label="LinkedIn">
-                        <i class="bi bi-linkedin" style="font-size: 20px;"></i>
+                        <i class="bi bi-linkedin"></i>
                     </a>
-                    <a href="https://www.instagram.com/windhakusumadewi?igsh=NXgyOWFlZGh4cmQw" aria-label="LinkedIn">
-                        <i class="bi bi-instagram" style="font-size: 20px;"></i>
+                    <a href="https://www.instagram.com/windhakusumadewi?igsh=NXgyOWFlZGh4cmQw" aria-label="Instagram">
+                        <i class="bi bi-instagram"></i>
                     </a>
                 </div>
             </div>
@@ -60,7 +67,7 @@
                 <section class="project-section active">
                     <div class="project-container">
                         <h2 class="section-title">My <span class="highlight">Projects</span></h2>
-                        <p class="section-subtitle">Some projects I have worked on</p>
+                        <p class="section-subtitle">// Some projects I have worked on</p>
 
                         <div class="project-grid">
                             <div class="project-card">
@@ -87,7 +94,10 @@
                             </div>
 
                             <div class="project-card">
-                                <h3 class="project-title">UI/UX HewanKu (Petshop)</h3>
+                                <div class="project-title-row">
+                                    <h3 class="project-title">UI/UX HewanKu (Petshop)</h3>
+                                    <span class="status-badge"><span class="status-dot"></span>In Progress</span>
+                                </div>
                                 <p class="project-description">HewanKu is a UI/UX design concept for a modern pet store
                                     app,
                                     featuring product search and product details.</p>
@@ -99,7 +109,7 @@
                         </div>
 
                         <div class="project-grid">
-                            <div class="project-card" style="margin-top: 30px;">
+                            <div class="project-card">
                                 <h3 class="project-title">Ticketing App</h3>
                                 <p class="project-description">Converted the Ticketing app UI from Figma design into Flutter.</p>
                                 <div class="tech-tags">
@@ -108,7 +118,7 @@
                                 <a href="tiket/tiket.html" class="project-link">View Project →</a>
                             </div>
 
-                            <div class="project-card" style="margin-top: 30px;">
+                            <div class="project-card">
                                 <h3 class="project-title">Sewa Lapangan</h3>
                                 <p class="project-description">Converted the Field Rental app UI into Flutter based on the provided UI/UX design.</p>
                                 <div class="tech-tags">
@@ -117,14 +127,24 @@
                                 <a href="lapangan/lapangan.html" class="project-link">View Project →</a>
                             </div>
 
-                            <div class="project-card" style="margin-top: 30px;">
+                            <div class="project-card">
                                 <h3 class="project-title">Jurnalku</h3>
                                 <p class="project-description">Converted the JurnalKu website UI into a mobile application version using Flutter.
-</p>
+                                </p>
                                 <div class="tech-tags">
                                     <span class="tech-tag">Flutter</span>
                                 </div>
                                 <a href="jurnalku/jurnalku.html" class="project-link">View Project →</a>
+                            </div>
+
+                            <div class="project-card">
+                                <h3 class="project-title">Task Management</h3>
+                                <p class="project-description">A task management web app built with Laravel 12, featuring task priorities, due dates, filtering, and a progress dashboard.</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Laravel 12</span>
+                                    <span class="tech-tag">PHP</span>
+                                </div>
+                                <a href="task/task.html" class="project-link">View Project →</a>
                             </div>
                         </div>
                     </div>

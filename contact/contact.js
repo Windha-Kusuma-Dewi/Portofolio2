@@ -1,19 +1,27 @@
 document.addEventListener('DOMContentLoaded', function () {
-    console.log('Contact page loaded');
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const rootStyle = getComputedStyle(document.documentElement);
+    const borderColor = rootStyle.getPropertyValue('--border').trim();
+    const accentColor = rootStyle.getPropertyValue('--accent').trim();
+    const accentSoft = rootStyle.getPropertyValue('--accent-soft').trim();
+    const errorColor = '#ef4444';
 
     const animatedElements = [
         '.section-title',
+        '.section-subtitle',
         '.contact-info',
         '.contact-item',
-        '.contact-form',
-        '.form-input',
-        '.form-textarea',
-        '.form-btn'
+        '.contact-form'
     ];
 
     const elements = document.querySelectorAll(animatedElements.join(','));
 
     elements.forEach((el, index) => {
+        if (prefersReducedMotion) {
+            el.style.opacity = '1';
+            return;
+        }
+
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
         el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
@@ -21,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
         setTimeout(() => {
             el.style.opacity = '1';
             el.style.transform = 'translateY(0)';
-        }, 200 + index * 150);
+        }, 150 + index * 130);
     });
 
 
@@ -37,9 +45,9 @@ document.addEventListener('DOMContentLoaded', function () {
         formInputs.forEach(input => {
             if (!input.value.trim()) {
                 isValid = false;
-                input.style.borderColor = '#ef4444';
+                input.style.borderColor = errorColor;
             } else {
-                input.style.borderColor = 'rgba(250, 204, 21, 0.2)';
+                input.style.borderColor = borderColor;
             }
         });
 
@@ -66,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 contactForm.reset();
 
                 formInputs.forEach(input => {
-                    input.style.borderColor = 'rgba(250, 204, 21, 0.2)';
+                    input.style.borderColor = borderColor;
                 });
             } else {
                 alert("Gagal mengirim pesan. Silakan coba lagi.");
@@ -83,14 +91,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     formInputs.forEach(input => {
         input.addEventListener('focus', function () {
-            this.style.borderColor = '#facc15';
-            this.style.boxShadow = '0 0 0 3px rgba(250, 204, 21, 0.1)';
+            this.style.borderColor = accentColor;
+            this.style.boxShadow = `0 0 0 3px ${accentSoft}`;
         });
 
         input.addEventListener('blur', function () {
             this.style.boxShadow = 'none';
             if (!this.value.trim()) {
-                this.style.borderColor = 'rgba(250, 204, 21, 0.2)';
+                this.style.borderColor = borderColor;
             }
         });
     });

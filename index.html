@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="home/home.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
@@ -10,30 +13,34 @@
 </head>
 <body>
     <div class="container">
-        <button class="mobile-menu-btn" onclick="toggleSidebar()">☰</button>
+        <button class="mobile-menu-btn" onclick="toggleSidebar()" aria-label="Buka menu">☰</button>
         <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
 
         <aside class="sidebar" id="sidebar">
             <div class="sidebar-header">
-                <img src="img/windha.png" alt="Windha Kusuma Dewi">
-                <h1>Windha Kusuma Dewi</h1>
+                <div class="avatar-ring">
+                    <img src="img/windha.png" alt="Windha Kusuma Dewi">
+                </div>
+                <div class="sidebar-title">
+                    <h1>Windha Kusuma Dewi</h1>
+                </div>
             </div>
 
             <nav class="nav">
                 <a href="index.html" class="nav-item active">
-                    <i class="bi bi-house-door" style="font-size: 20px;"></i>
+                    <span class="nav-icon"><i class="bi bi-house-door"></i></span>
                     Home
                 </a>
                 <a href="project/project.html" class="nav-item">
-                    <i class="bi bi-suitcase-lg" style="font-size: 20px;"></i>
+                    <span class="nav-icon"><i class="bi bi-suitcase-lg"></i></span>
                     Project
                 </a>
                 <a href="about/about.html" class="nav-item">
-                    <i class="bi bi-person" style="font-size: 20px;"></i>
+                    <span class="nav-icon"><i class="bi bi-person"></i></span>
                     About Me
                 </a>
                 <a href="contact/contact.html" class="nav-item">
-                    <i class="bi bi-envelope" style="font-size: 20px;"></i>
+                    <span class="nav-icon"><i class="bi bi-envelope"></i></span>
                     Contact
                 </a>
             </nav>
@@ -41,13 +48,13 @@
             <div class="sidebar-footer">
                 <div class="social-links">
                     <a href="https://github.com/Windha-Kusuma-Dewi" aria-label="GitHub">
-                        <i class="bi bi-github" style="font-size: 20px;"></i>
+                        <i class="bi bi-github"></i>
                     </a>
                     <a href="https://www.linkedin.com/in/windhakusumadewi/" aria-label="LinkedIn">
-                        <i class="bi bi-linkedin" style="font-size: 20px;"></i>
+                        <i class="bi bi-linkedin"></i>
                     </a>
-                    <a href="https://www.instagram.com/windhakusumadewi?igsh=NXgyOWFlZGh4cmQw" aria-label="LinkedIn">
-                        <i class="bi bi-instagram" style="font-size: 20px;"></i>
+                    <a href="https://www.instagram.com/windhakusumadewi?igsh=NXgyOWFlZGh4cmQw" aria-label="Instagram">
+                        <i class="bi bi-instagram"></i>
                     </a>
                 </div>
             </div>
@@ -56,16 +63,62 @@
         <main class="main-content">
             <div class="content-wrapper">
                 <section class="home-section active">
-                    <div>
-                        <div class="badge">Welcome to my portfolio</div>
-                        <h1 class="hero-title">Hi, I'm <span class="highlight">Windha Kusuma Dewi</span></h1>
-                        <p class="hero-subtitle">Frontend Developer | UI/UX Enthusiast</p>
-                        <p class="hero-description">
-                            I am a Frontend Developer who focuses on creating modern, responsive, and user-friendly interfaces. In addition, I also have a strong interest in UI/UX design.
-                        </p>
-                        <div class="btn-group">
-                            <a href="project/project.html" class="btn-primary">View Project</a>
-                            <a href="contact/contact.html" class="btn-secondary">Contact</a>
+                    <div class="hero-glow" aria-hidden="true"></div>
+                    <div class="hero-window">
+                        <div class="window-bar">
+                            <div class="window-dots">
+                                <span class="window-dot dot-a"></span>
+                                <span class="window-dot dot-b"></span>
+                                <span class="window-dot dot-c"></span>
+                            </div>
+                        </div>
+                        <div class="window-body">
+                            <div class="hero-content">
+                                <div class="badge-row">
+                                    <div class="badge">Welcome to my portfolio</div>
+                                    <div class="status-badge">
+                                        <span class="status-dot"></span>
+                                        Available for work
+                                    </div>
+                                </div>
+                                <h1 class="hero-title">Hi, I'm <span class="highlight">Windha Kusuma Dewi</span><span class="cursor" aria-hidden="true"></span></h1>
+                                <p class="hero-subtitle">
+                                    <span class="role-prefix">&gt;</span>
+                                    <span id="typed-role"></span><span class="type-cursor" aria-hidden="true"></span>
+                                </p>
+                                <p class="hero-description">
+                                    I am a Frontend Developer who focuses on creating modern, responsive, and user-friendly interfaces. In addition, I also have a strong interest in UI/UX design.
+                                </p>
+
+                                <div class="tech-stack">
+                                    <div class="tech-badges">
+                                        <span class="tech-badge"><i class="bi bi-filetype-html"></i> HTML</span>
+                                        <span class="tech-badge"><i class="bi bi-filetype-css"></i> CSS</span>
+                                        <span class="tech-badge"><i class="bi bi-filetype-js"></i> JavaScript</span>
+                                        <span class="tech-badge"><i class="bi bi-filetype-php"></i> Laravel</span>
+                                        <span class="tech-badge"><i class="bi bi-palette2"></i> Figma</span>
+                                    </div>
+                                </div>
+
+                                <div class="btn-group">
+                                    <a href="project/project.html" class="btn-primary">View Project</a>
+                                    <a href="contact/contact.html" class="btn-secondary">Contact</a>
+                                </div>
+                            </div>
+
+                            <div class="hero-visual" aria-hidden="true">
+                                <div class="code-card">
+                                    <div class="code-card-header">
+                                        <span class="code-dot"></span>
+                                        <span class="code-filename">profile.json</span>
+                                    </div>
+                                    <pre class="code-card-body"><code><span class="code-punc">{</span>
+  <span class="code-key">"name"</span><span class="code-punc">:</span> <span class="code-string">"Windha Kusuma Dewi"</span><span class="code-punc">,</span>
+  <span class="code-key">"role"</span><span class="code-punc">:</span> <span class="code-string">"Frontend Developer & UI/UX Design Enthusiast"</span><span class="code-punc">,</span>
+  <span class="code-key">"status"</span><span class="code-punc">:</span> <span class="code-string">"open_to_work"</span>
+<span class="code-punc">}</span></code></pre>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>

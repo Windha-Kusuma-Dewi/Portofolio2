@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="../project.css">
     <link rel="stylesheet" href="webshop.css">
@@ -13,38 +16,48 @@
 
 <body>
     <div class="container">
-        <button class="mobile-menu-btn" onclick="toggleSidebar()">☰</button>
+        <button class="mobile-menu-btn" onclick="toggleSidebar()" aria-label="Buka menu">☰</button>
         <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
 
-        <!-- Sidebar sama seperti project.html -->
         <aside class="sidebar" id="sidebar">
             <div class="sidebar-header">
-                <img src="../../img/windha.png" alt="Windha Kusuma Dewi">
-                <h1>Windha Kusuma Dewi</h1>
+                <div class="avatar-ring">
+                    <img src="../../img/windha.png" alt="Windha Kusuma Dewi">
+                </div>
+                <div class="sidebar-title">
+                    <h1>Windha Kusuma Dewi</h1>
+                </div>
             </div>
 
             <nav class="nav">
-                <a href="../../index.html" class="nav-item"><i class="bi bi-house-door" style="font-size:
-                    20px;"></i>
-                    Home</a>
-                <a href="../project.html" class="nav-item active"> <i class="bi bi-suitcase-lg" style="font-size: 20px;"></i>
-                    Project</a>
-                <a href="../../about/about.html" class="nav-item"><i class="bi bi-person" style="font-size: 20px;"></i>
-                    About Me</a>
-                <a href="../../contact/contact.html" class="nav-item"><i class="bi bi-envelope" style="font-size: 20px;"></i>
-                    Contact</a>
+                <a href="../../index.html" class="nav-item">
+                    <span class="nav-icon"><i class="bi bi-house-door"></i></span>
+                    Home
+                </a>
+                <a href="../project.html" class="nav-item active">
+                    <span class="nav-icon"><i class="bi bi-suitcase-lg"></i></span>
+                    Project
+                </a>
+                <a href="../../about/about.html" class="nav-item">
+                    <span class="nav-icon"><i class="bi bi-person"></i></span>
+                    About Me
+                </a>
+                <a href="../../contact/contact.html" class="nav-item">
+                    <span class="nav-icon"><i class="bi bi-envelope"></i></span>
+                    Contact
+                </a>
             </nav>
 
-             <div class="sidebar-footer">
+            <div class="sidebar-footer">
                 <div class="social-links">
                     <a href="https://github.com/Windha-Kusuma-Dewi" aria-label="GitHub">
-                        <i class="bi bi-github" style="font-size: 20px;"></i>
+                        <i class="bi bi-github"></i>
                     </a>
                     <a href="https://www.linkedin.com/in/windhakusumadewi/" aria-label="LinkedIn">
-                        <i class="bi bi-linkedin" style="font-size: 20px;"></i>
+                        <i class="bi bi-linkedin"></i>
                     </a>
-                    <a href="https://www.instagram.com/windhakusumadewi?igsh=NXgyOWFlZGh4cmQw" aria-label="LinkedIn">
-                        <i class="bi bi-instagram" style="font-size: 20px;"></i>
+                    <a href="https://www.instagram.com/windhakusumadewi?igsh=NXgyOWFlZGh4cmQw" aria-label="Instagram">
+                        <i class="bi bi-instagram"></i>
                     </a>
                 </div>
             </div>
@@ -59,39 +72,22 @@
                         <h2 class="detail-title">Webshop</h2>
                     </div>
 
-                    <!-- Screenshot Project -->
                     <div class="detail-image-wrapper">
                         <img class="detail-image" src="../../img/webshop/webshop.png" alt="Webshop Preview">
                     </div>
 
-                    <h2>Description</h2>
-                    <!-- Description -->
+                    <h2 class="description">Description</h2>
                     <p class="detail-description">
-                        Webshop is a practice project I created to develop my skills in building
-                        website layouts using pure HTML and CSS. This project features a simple online store page.
+                        Practice project building a simple online store landing page using pure HTML and CSS — a foundational exercise before moving on to more complex work.
                     </p>
 
-                    <p class="detail-description">In carrying out this work, I studied and applied several important aspects,
-including:</p>
+                    <h2 class="feature">Highlights</h2>
                     <ul class="list">
-                        <li>
-                            Structuring the page with basic HTML
-                        </li>
-                        <li>
-                            Layout settings using Flexbox
-                        </li>
-                        <li>
-                            Using simple design concepts
-                        </li>
+                        <li>Structured the page with semantic HTML</li>
+                        <li>Built the layout using Flexbox</li>
+                        <li>Applied simple, clean design principles</li>
                     </ul>
 
-                    <p class="detail-description">
-                        Although it does not yet have interactive features or a backend, this webshop is one of the projects
-                        that helped me understand the basics of website design and became the foundation before moving on
-                        to more complex work.
-                    </p>
-
-                    <!-- Tech Stack -->
                     <div class="detail-tech">
                         <span class="tech-tag">HTML</span>
                         <span class="tech-tag">CSS</span>

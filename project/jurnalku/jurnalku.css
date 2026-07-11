@@ -2,17 +2,55 @@
     --detail-img-max: 900px;
 }
 
+/* ==== BACK BUTTON + TITLE ==== */
+.detail-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.back-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--text);
+    cursor: pointer;
+    user-select: none;
+    transition: border-color 0.25s ease, color 0.25s ease;
+}
+
+.back-btn:hover {
+    border-color: var(--border-strong);
+    color: var(--accent);
+}
+
+.detail-title {
+    font-family: var(--font-display);
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
 /* ==== CAROUSEL ==== */
 .carousel-container {
     width: 100%;
     max-width: var(--detail-img-max);
-    margin: 40px auto;
+    margin: 8px auto 40px;
 }
 
 .carousel-wrapper {
     overflow: hidden;
-    border-radius: 10px;
-    box-shadow:0 6px 18px rgba(0,0,0,0.08);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    box-shadow: 0 20px 50px -25px rgba(0, 0, 0, 0.7);
 }
 
 .carousel-slide {
@@ -23,94 +61,116 @@
 .carousel-slide img {
     width: 100%;
     flex-shrink: 0;
+    display: block;
 }
 
-/* Tombol kiri–kanan DI LUAR gambar */
+/* Tombol kiri-kanan di luar gambar */
 .carousel-controls {
-    margin: 15px 0 10px 0;
+    margin: 16px 0 8px 0;
     display: flex;
     justify-content: space-between;
 }
 
 .carousel-btn {
-    background: rgba(0,0,0,0.45);
-    color: white;
-    border: none;
-    font-size: 25px;
-    padding: 10px 15px;
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border);
+    font-size: 20px;
+    padding: 8px 16px;
     border-radius: 8px;
     cursor: pointer;
-    transition: 0.25s;
+    transition: border-color 0.25s ease, color 0.25s ease;
 }
 
 .carousel-btn:hover {
-    background: rgba(0,0,0,0.7);
+    border-color: var(--border-strong);
+    color: var(--accent);
 }
 
-/* DOTS – versi kecil */
+/* DOTS */
 .carousel-dots {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 12px;
 }
 
 .carousel-dots .dot {
     display: inline-block;
     width: 7px;
     height: 7px;
-    margin: 0 3px;
-    background: #cfcfcf;
+    margin: 0 4px;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
     border-radius: 50%;
     cursor: pointer;
     transition: 0.3s;
 }
 
 .carousel-dots .dot.active {
-    background: #333;
+    background: var(--accent);
+    border-color: var(--accent);
     width: 9px;
     height: 9px;
 }
 
-/* ==== BACK BUTTON ==== */
-.detail-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 15px;
-}
-
-.back-btn {
-    font-size: 30px;
-    font-weight: bold;
-    cursor: pointer;
-    user-select: none;
-}
-
-.back-btn:hover {
-    opacity: 0.7;
-}
-
-/* ==== ORIGINAL CSS ==== */
-.description {
-    margin-left: 15px;
-}
-
+/* ==== CONTENT ==== */
+.description,
 .feature {
-    margin-left: 15px;
-    margin-top: 20px;
+    font-family: var(--font-display);
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    margin-top: 28px;
 }
-.detail-description { 
-    margin-top: 15px; 
-    margin-left: 30px; 
-    margin-right: 90px;
+
+.detail-description {
+    margin-top: 12px;
+    max-width: 720px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    font-size: 15px;
 }
-.list { margin-left: 50px; margin-top: 10px; }
-.detail-tech { margin: 30px 0 10px 0; }
+
+.list {
+    margin-top: 10px;
+    margin-left: 20px;
+    color: var(--text-muted);
+    line-height: 1.9;
+    font-size: 15px;
+}
+
+.detail-tech {
+    margin: 28px 0 8px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
 .detail-button {
-    color: rgb(48, 48, 255);
-    text-decoration: underline;
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--accent-2);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-2);
     cursor: pointer;
+    transition: color 0.25s ease, border-color 0.25s ease;
+}
+
+.detail-button:hover {
+    color: var(--accent-hover);
+    border-color: var(--accent-hover);
 }
 
 @media (max-width: 800px){
     :root{ --detail-img-max: 100%; }
+}
+
+@media (max-width: 640px) {
+    .detail-title {
+        font-size: 22px;
+    }
+
+    .detail-description {
+        max-width: 100%;
+    }
 }

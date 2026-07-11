@@ -15,7 +15,7 @@ if (window.innerWidth >= 1024) {
 window.addEventListener('resize', () => {
     const sidebar = document.getElementById('sidebar');
     const overlay = document.getElementById('overlay');
-    
+
     if (window.innerWidth >= 1024) {
         sidebar?.classList.remove('closed');
         overlay?.classList.remove('active');

@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="../project.css">
-    <link rel="stylesheet" href="petshop.css">
+    <link rel="stylesheet" href="task.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <title>HewanKu</title>
+    <title>Task Management</title>
 </head>
 
 <body>
@@ -67,19 +69,26 @@
             <div class="content-wrapper">
 
                 <section class="detail-section">
+
                     <div class="detail-header">
                         <span class="back-btn" onclick="history.back()">&#10799;</span>
-                        <h2 class="detail-title">HewanKu (Petshop)</h2>
-                        <span class="status-badge"><span class="status-dot"></span>In Progress</span>
+                        <h2 class="detail-title">Task Management</h2>
                     </div>
 
                     <div class="carousel-container">
 
                         <div class="carousel-wrapper">
                             <div class="carousel-slide" id="carouselSlide">
-                                <img src="../../img/petshop/1.png">
-                                <img src="../../img/petshop/2.png">
-                                <img src="../../img/petshop/3.png">
+                                <img src="../../img/task/1.png">
+                                <img src="../../img/task/2.png">
+                                <img src="../../img/task/3.png">
+                                <img src="../../img/task/4.png">
+                                <img src="../../img/task/5.png">
+                                <img src="../../img/task/6.png">
+                                <img src="../../img/task/7.png">
+                                <img src="../../img/task/8.png">
+                                <img src="../../img/task/9.png">
+                                <img src="../../img/task/10.png">
                             </div>
                         </div>
 
@@ -92,24 +101,25 @@
                     </div>
 
                     <h2 class="description">Description</h2>
+
                     <p class="detail-description">
-                        UI/UX design concept for a modern pet shop app, focused on easy product search and clear product details.
+                        A task management web app built with Laravel 12, designed to help users organize daily
+                        priorities with a clean, modern dark interface.
                     </p>
 
                     <h2 class="feature">Highlights</h2>
                     <ul class="list">
-                        <li>Mapped the user flow and designed proportional, consistent layouts in Figma</li>
-                        <li>Focused on quick access to key info: price, description, and reviews</li>
-                        <li>Practiced structuring clear navigation and reusable UI components</li>
-                        <li>Currently expanding with additional screens for cart & checkout</li>
+                        <li>Built task creation and management features with priority levels and due dates</li>
+                        <li>Implemented search and status-based filtering for tasks</li>
+                        <li>Designed a progress dashboard to track task completion</li>
+                        <li>Built backend logic, routing, and data handling using Laravel 12</li>
                     </ul>
 
                     <div class="detail-tech">
-                        <span class="tech-tag">Figma</span>
+                        <span class="tech-tag">Laravel 12</span>
+                        <span class="tech-tag">PHP</span>
                     </div>
-
                 </section>
-
             </div>
         </main>
 
@@ -155,6 +165,7 @@
             dots[slideIndex].classList.add("active");
         }
     </script>
+
 </body>
 
 </html>

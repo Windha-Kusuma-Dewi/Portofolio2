@@ -1,30 +1,33 @@
 /* About Section */
 .about-section {
-    padding: 48px 0;
+    padding: 8px 0 48px;
 }
 
 .section-title {
+    font-family: var(--font-display);
     font-size: 36px;
-    font-weight: bold;
+    font-weight: 700;
     margin-bottom: 8px;
+    letter-spacing: -0.01em;
 }
 
 .about-container {
-    margin-top: 48px;
+    margin-top: 40px;
 }
 
 .info-card {
-    background-color: #18181b;
-    border: 1px solid rgba(250, 204, 21, 0.2);
-    border-radius: 8px;
-    padding: 24px;
-    margin-bottom: 48px;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 40px;
 }
 
 .info-card p {
-    color: #d1d5db;
-    line-height: 1.6;
+    color: var(--text-muted);
+    line-height: 1.7;
     margin-bottom: 16px;
+    font-size: 15px;
 }
 
 .info-card p:last-child {
@@ -33,9 +36,11 @@
 
 /* Subsection Title */
 .subsection-title {
-    font-size: 24px;
-    color: #facc15;
-    margin-bottom: 16px;
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 18px;
 }
 
 /* CV Section */
@@ -48,73 +53,94 @@
     align-items: center;
     gap: 8px;
     padding: 12px 24px;
-    background-color: #facc15;
-    color: #000;
+    background-color: var(--accent);
+    color: #0a0a0c;
     font-weight: 600;
-    border: none;
-    border-radius: 4px;
+    font-size: 15px;
+    border: 1px solid var(--accent);
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color .3s;
+    transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
     text-decoration: none;
 }
 
 .cv-btn:hover {
-    background-color: #fde047;
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px -8px rgba(250, 204, 21, 0.5);
 }
 
 /* Experience & Education Sections */
 .experience-section,
 .education-section {
-    margin-bottom: 48px;
+    margin-bottom: 44px;
 }
 
 /* Timeline */
 .timeline {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 18px;
 }
 
 .timeline-item {
-    background-color: #18181b;
-    border: 1px solid rgba(250, 204, 21, 0.2);
-    border-radius: 8px;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
     padding: 24px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item:hover {
+    border-color: var(--border-strong);
+    box-shadow: 0 16px 36px -20px rgba(250, 204, 21, 0.3);
 }
 
 .timeline-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 10px;
 }
 
 .timeline-title {
-    font-size: 20px;
-    font-weight: bold;
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .timeline-period {
-    font-size: 14px;
-    color: #facc15;
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    color: var(--accent);
+    background-color: var(--accent-soft);
+    border: 1px solid var(--border);
+    padding: 4px 10px;
+    border-radius: 9999px;
+    white-space: nowrap;
 }
 
 .timeline-company {
-    color: #9ca3af;
-    margin-bottom: 8px;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--accent-2);
+    margin-bottom: 10px;
 }
 
 .timeline-description {
-    color: #d1d5db;
+    color: var(--text-muted);
     margin-bottom: 12px;
+    line-height: 1.7;
+    font-size: 14.5px;
 }
 
 .timeline-list {
-    color: #e5e7eb;
+    color: var(--text-muted);
     margin-left: 18px;
-    line-height: 1.6;
+    line-height: 1.8;
+    font-size: 14.5px;
 }
 
 /* Responsive */
@@ -124,7 +150,7 @@
     }
 
     .subsection-title {
-        font-size: 20px;
+        font-size: 19px;
     }
 
     .timeline-header {

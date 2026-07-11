@@ -4,6 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="../project.css">
     <link rel="stylesheet" href="lapangan.css">
@@ -13,40 +18,48 @@
 
 <body>
     <div class="container">
-        <button class="mobile-menu-btn" onclick="toggleSidebar()">☰</button>
+        <button class="mobile-menu-btn" onclick="toggleSidebar()" aria-label="Buka menu">☰</button>
         <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
 
-        <!-- Sidebar -->
         <aside class="sidebar" id="sidebar">
             <div class="sidebar-header">
-                <img src="../../img/windha.png" alt="Windha Kusuma Dewi">
-                <h1>Windha Kusuma Dewi</h1>
+                <div class="avatar-ring">
+                    <img src="../../img/windha.png" alt="Windha Kusuma Dewi">
+                </div>
+                <div class="sidebar-title">
+                    <h1>Windha Kusuma Dewi</h1>
+                </div>
             </div>
 
             <nav class="nav">
-                <a href="../../index.html" class="nav-item"><i class="bi bi-house-door" style="font-size:
-                    20px;"></i>
-                    Home</a>
-                <a href="../project.html" class="nav-item active"> <i class="bi bi-suitcase-lg"
-                        style="font-size: 20px;"></i>
-                    Project</a>
-                <a href="../../about/about.html" class="nav-item"><i class="bi bi-person" style="font-size: 20px;"></i>
-                    About Me</a>
-                <a href="../../contact/contact.html" class="nav-item"><i class="bi bi-envelope"
-                        style="font-size: 20px;"></i>
-                    Contact</a>
+                <a href="../../index.html" class="nav-item">
+                    <span class="nav-icon"><i class="bi bi-house-door"></i></span>
+                    Home
+                </a>
+                <a href="../project.html" class="nav-item active">
+                    <span class="nav-icon"><i class="bi bi-suitcase-lg"></i></span>
+                    Project
+                </a>
+                <a href="../../about/about.html" class="nav-item">
+                    <span class="nav-icon"><i class="bi bi-person"></i></span>
+                    About Me
+                </a>
+                <a href="../../contact/contact.html" class="nav-item">
+                    <span class="nav-icon"><i class="bi bi-envelope"></i></span>
+                    Contact
+                </a>
             </nav>
 
             <div class="sidebar-footer">
                 <div class="social-links">
                     <a href="https://github.com/Windha-Kusuma-Dewi" aria-label="GitHub">
-                        <i class="bi bi-github" style="font-size: 20px;"></i>
+                        <i class="bi bi-github"></i>
                     </a>
                     <a href="https://www.linkedin.com/in/windhakusumadewi/" aria-label="LinkedIn">
-                        <i class="bi bi-linkedin" style="font-size: 20px;"></i>
+                        <i class="bi bi-linkedin"></i>
                     </a>
-                    <a href="https://www.instagram.com/windhakusumadewi?igsh=NXgyOWFlZGh4cmQw" aria-label="LinkedIn">
-                        <i class="bi bi-instagram" style="font-size: 20px;"></i>
+                    <a href="https://www.instagram.com/windhakusumadewi?igsh=NXgyOWFlZGh4cmQw" aria-label="Instagram">
+                        <i class="bi bi-instagram"></i>
                     </a>
                 </div>
             </div>
@@ -57,13 +70,11 @@
 
                 <section class="detail-section">
 
-                    <!-- ==== BACK BUTTON + TITLE ==== -->
                     <div class="detail-header">
                         <span class="back-btn" onclick="history.back()">&#10799;</span>
                         <h2 class="detail-title">Sewa Lapangan</h2>
                     </div>
 
-                    <!-- === CAROUSEL === -->
                     <div class="carousel-container">
 
                         <div class="carousel-wrapper">
@@ -81,13 +92,18 @@
 
                         <div class="carousel-dots" id="carouselDots"></div>
                     </div>
-                    <!-- === CAROUSEL END === -->
 
                     <h2 class="description">Description</h2>
 
                     <p class="detail-description">
-                        Developed the Field Rental application interface using Flutter based on the provided UI/UX design, focusing on implementing the layout and visual appearance according to the design reference.
+                        Converted a UI/UX design for a field rental app into a Flutter mobile interface.
                     </p>
+
+                    <h2 class="feature">Highlights</h2>
+                    <ul class="list">
+                        <li>Implemented layout and visual details based on the provided design</li>
+                        <li>Focused on consistent UI across screens</li>
+                    </ul>
 
                     <div class="detail-tech">
                         <span class="tech-tag">Flutter</span>
@@ -102,7 +118,6 @@
 
     <script src="../../script.js"></script>
 
-    <!-- === CAROUSEL JS === -->
     <script>
         let slideIndex = 0;
 
@@ -110,7 +125,6 @@
         const images = slide.querySelectorAll("img");
         const dotsContainer = document.getElementById("carouselDots");
 
-        /* Generate dots otomatis */
         images.forEach((_, i) => {
             let dot = document.createElement("span");
             dot.classList.add("dot");
@@ -142,7 +156,5 @@
             dots[slideIndex].classList.add("active");
         }
     </script>
-
 </body>
-
 </html>

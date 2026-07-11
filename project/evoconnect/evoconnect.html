@@ -4,6 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="../project.css">
     <link rel="stylesheet" href="evoconnect.css">
@@ -13,38 +18,48 @@
 
 <body>
     <div class="container">
-        <button class="mobile-menu-btn" onclick="toggleSidebar()">☰</button>
+        <button class="mobile-menu-btn" onclick="toggleSidebar()" aria-label="Buka menu">☰</button>
         <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
 
-        <!-- Sidebar -->
         <aside class="sidebar" id="sidebar">
             <div class="sidebar-header">
-                <img src="../../img/windha.png" alt="Windha Kusuma Dewi">
-                <h1>Windha Kusuma Dewi</h1>
+                <div class="avatar-ring">
+                    <img src="../../img/windha.png" alt="Windha Kusuma Dewi">
+                </div>
+                <div class="sidebar-title">
+                    <h1>Windha Kusuma Dewi</h1>
+                </div>
             </div>
 
             <nav class="nav">
-                <a href="../../index.html" class="nav-item"><i class="bi bi-house-door" style="font-size:
-                    20px;"></i>
-                    Home</a>
-                <a href="../project.html" class="nav-item active"> <i class="bi bi-suitcase-lg" style="font-size: 20px;"></i>
-                    Project</a>
-                <a href="../../about/about.html" class="nav-item"><i class="bi bi-person" style="font-size: 20px;"></i>
-                    About Me</a>
-                <a href="../../contact/contact.html" class="nav-item"><i class="bi bi-envelope" style="font-size: 20px;"></i>
-                    Contact</a>
+                <a href="../../index.html" class="nav-item">
+                    <span class="nav-icon"><i class="bi bi-house-door"></i></span>
+                    Home
+                </a>
+                <a href="../project.html" class="nav-item active">
+                    <span class="nav-icon"><i class="bi bi-suitcase-lg"></i></span>
+                    Project
+                </a>
+                <a href="../../about/about.html" class="nav-item">
+                    <span class="nav-icon"><i class="bi bi-person"></i></span>
+                    About Me
+                </a>
+                <a href="../../contact/contact.html" class="nav-item">
+                    <span class="nav-icon"><i class="bi bi-envelope"></i></span>
+                    Contact
+                </a>
             </nav>
 
-             <div class="sidebar-footer">
+            <div class="sidebar-footer">
                 <div class="social-links">
                     <a href="https://github.com/Windha-Kusuma-Dewi" aria-label="GitHub">
-                        <i class="bi bi-github" style="font-size: 20px;"></i>
+                        <i class="bi bi-github"></i>
                     </a>
                     <a href="https://www.linkedin.com/in/windhakusumadewi/" aria-label="LinkedIn">
-                        <i class="bi bi-linkedin" style="font-size: 20px;"></i>
+                        <i class="bi bi-linkedin"></i>
                     </a>
-                    <a href="https://www.instagram.com/windhakusumadewi?igsh=NXgyOWFlZGh4cmQw" aria-label="LinkedIn">
-                        <i class="bi bi-instagram" style="font-size: 20px;"></i>
+                    <a href="https://www.instagram.com/windhakusumadewi?igsh=NXgyOWFlZGh4cmQw" aria-label="Instagram">
+                        <i class="bi bi-instagram"></i>
                     </a>
                 </div>
             </div>
@@ -87,28 +102,17 @@
                     <h2 class="description">Description</h2>
 
                     <p class="detail-description">
-                        EVOConnect is a professional social networking platform developed to help users build
-                        work connections, expand their professional networks, and find relevant career opportunities
-                        . Users can create profiles, showcase portfolios, share experiences,
-                        interact with the community, and search for or post job vacancies.
-                        The platform adopts a modern architecture with React JS on the frontend to provide a
-                        good user experience. Meanwhile, the backend is built using Golang (Go).
-                        <br>
-                        <br>
-                        This project was developed by a team of six people, with a structured division of tasks ranging from frontend to backend.
-Teamwork allowed each part of the system to be organized more neatly.
-
+                        Professional social networking platform for building career connections, searching for jobs, and
+                        career development. I built the frontend UI in a 6-person team using React JS, with a Golang
+                        backend.
                     </p>
 
-                    <h2 class="feature">Feature</h2>
+                    <h2 class="feature">Highlights</h2>
                     <ul class="list">
-                        <li>Authentication Feature (Login)</li>
-                        <li>Networking System</li>
-                        <li>Job & Vacancy Search</li>
-                        <li>Posts</li>
-                        <li>Dashboard</li>
-                        <li>Notifications</li>
-                        <li>Modern UI</li>
+                        <li>Built responsive UI components with React JS</li>
+                        <li>Implemented authentication, networking, and job search features</li>
+                        <li>Developed posts, dashboard, and notification features</li>
+                        <li>Collaborated with a 6-person team across frontend and backend</li>
                     </ul>
 
                     <div class="detail-tech">
