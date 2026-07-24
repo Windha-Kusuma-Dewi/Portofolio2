@@ -58,10 +58,6 @@ body {
     flex-direction: column;
 }
 
-.sidebar.closed {
-    transform: translateX(-100%);
-}
-
 .sidebar-header {
     padding: 28px 24px;
     border-bottom: 1px solid var(--border);
@@ -222,7 +218,7 @@ body {
     position: fixed;
     top: 16px;
     left: 16px;
-    z-index: 30;
+    z-index: 60;
     background-color: var(--accent);
     color: #0a0a0c;
     border: none;
@@ -231,6 +227,7 @@ body {
     cursor: pointer;
     font-size: 20px;
     display: none;
+    transition: left 0.3s ease;
 }
 
 .overlay {
@@ -276,8 +273,17 @@ body {
         margin-left: 0;
     }
 
-    .sidebar.closed {
+    .sidebar {
         transform: translateX(-100%);
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .container:has(.sidebar.open) .mobile-menu-btn {
+        left: auto;
+        right: 16px;
     }
 
     .mobile-menu-btn {

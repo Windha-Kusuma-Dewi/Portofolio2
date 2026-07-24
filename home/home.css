@@ -387,6 +387,10 @@
 }
 
 @media (max-width: 1024px) {
+    .main-content:has(.home-section) .content-wrapper {
+        padding-top: 76px;
+    }
+
     .window-body {
         padding: 40px;
         grid-template-columns: 1fr;
@@ -433,5 +437,35 @@
     .stats-row {
         flex-wrap: wrap;
         row-gap: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-content:has(.home-section) .content-wrapper {
+        padding-top: 68px;
+    }
+
+    .hero-title {
+        font-size: 26px;
+    }
+
+    .hero-description {
+        font-size: 14.5px;
+    }
+
+    .badge,
+    .status-badge {
+        font-size: 12px;
+        padding: 7px 12px;
+    }
+
+    .tech-badge {
+        font-size: 12px;
+        padding: 6px 11px;
+    }
+
+    .code-card-body {
+        padding: 16px;
+        font-size: 12px;
     }
 }
